@@ -3,7 +3,7 @@
 The program calculates the sum and product of up to 11 polynomials in one variable “x”. The polynomials must be entered in simplest form. Negative exponents and coefficients are allowed.
 
 Procedural/Functional Decomposition
-•	Problem is broken down into subtasks handled by different functions
+Problem is broken down into subtasks handled by different functions
 •	Data and data structures passed around via parameters
 •	No objects are included in the program
 
