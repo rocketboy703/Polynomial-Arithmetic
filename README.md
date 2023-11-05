@@ -1,4 +1,4 @@
-Program Design
+#Program Design
 
 The program calculates the sum and product of up to 11 polynomials in one variable “x”. The polynomials must be entered in simplest form. Negative exponents and coefficients are allowed.
 
@@ -34,7 +34,7 @@ Space complexity of operations
 
 ----------------------------------------------------------------------------------------------------
 
-Limitations of Current Works
+#Limitations of Current Works
 
 Unable to handle large numeric values
 •	Numbers that are larger than 8^11 are not displayed properly in the output console
