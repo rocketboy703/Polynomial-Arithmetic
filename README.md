@@ -7,9 +7,7 @@ Procedural/Functional Decomposition
 Problem is broken down into subtasks handled by different functions
 
 Data and data structures passed around via parameters
-
 No objects are included in the program
-
 No library functions are included in the program.
 
 Key Data Structures
