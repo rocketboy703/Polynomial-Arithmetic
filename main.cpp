@@ -70,6 +70,7 @@ int main()
       printProduct(set, numPoly);
       cout << endl;
     }
+
   } while (numPoly != 0);
 }
 
@@ -144,8 +145,9 @@ char lowercase(char c)
 {
   if (c >= 'A' && c <= 'Z')
   {
-    return c + 'A';
+    return c - 'A' + 'a';
   }
+
   return c;
 }
 
@@ -169,6 +171,7 @@ int length(string s)
   {
     i++;
   }
+
   return i;
 }
 
@@ -197,8 +200,9 @@ int getNumPoly()
   do 
   {
     numPoly = 0;
-    cin >> input;
     valid = true;
+
+    getline(cin, input);
 
     if (length(input) == 0 || length(input) > MAXDIGIT)
     {
@@ -245,24 +249,26 @@ Polynomial getPoly()
 
   do
   {
-    cin >> input;
+    input = "";
+    c = ' ';
+
+    do
+    {
+      if (!isSpace(c))
+      {
+        input += c;
+      }
+
+      cin.get(c);
+
+    } while (!isNewLine(c));
 
     if (!isValidPoly(input))
     {
       cout << "Invalid polynomial. Please try again -> ";
     }
+
   } while (!isValidPoly(input));
-
-  cin.get(c);
-
-  while (!isNewLine(c))
-  {
-    if (!isSpace(c))
-    {
-      input += c;
-    }
-    cin.get(c);
-  }
 
   Polynomial temp = createList(input, numTerms(input));
 
@@ -279,12 +285,12 @@ int numTerms(string input)
 
   for (int i = 1; i < length(input); i++)
   {
-
     if (isOp(input[i]) && !isCaret(input[i - 1]))
     {
       numTerms++;
     }
   }
+
   return numTerms;
 }
 
