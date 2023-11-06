@@ -21,6 +21,7 @@ bool isNewLine(char c);
 bool isOp(char c);
 bool isSpace(char c);
 bool isValidPoly(string input);
+char lowercase(char c);
 int charToInt(char c);
 int getNumPoly();
 int length(string s);
@@ -135,6 +136,10 @@ bool isNewLine(char c)
   return (c == '\n');
 }
 
+/*---------------------------------------------------------
+Takes an alphebetical character and returns it in
+lowercase
+---------------------------------------------------------*/
 char lowercase(char c)
 {
   if (c >= 'A' && c <= 'Z')
