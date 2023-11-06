@@ -219,7 +219,7 @@ int getNumPoly()
       }
     }
 
-    if (numPoly < 0 || numPoly > MAXNUMPOLY)
+    if (numPoly < 0 || numPoly > MAXNUMPOLY || numPoly == 1)
     {
       valid = false;
     }
